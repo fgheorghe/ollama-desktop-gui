@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://coqaoarvto430"]
+
+[ext_resource type="Script" path="res://Go.gd" id="1_3w3qb"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1151.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="InputText" type="TextEdit" parent="Panel"]
+offset_right = 841.0
+offset_bottom = 35.0
+
+[node name="GoButton" type="Button" parent="Panel" node_paths=PackedStringArray("inputText", "outputText", "optionButton")]
+offset_left = 1043.0
+offset_top = 1.0
+offset_right = 1150.0
+offset_bottom = 36.0
+text = "Go"
+script = ExtResource("1_3w3qb")
+inputText = NodePath("../InputText")
+outputText = NodePath("../OutputText")
+optionButton = NodePath("../OptionButton")
+
+[node name="OutputText" type="TextEdit" parent="Panel"]
+offset_top = 36.0
+offset_right = 1149.0
+offset_bottom = 649.0
+wrap_mode = 1
+
+[node name="OptionButton" type="OptionButton" parent="Panel"]
+layout_mode = 0
+offset_left = 841.0
+offset_right = 1043.0
+offset_bottom = 36.0
